@@ -1,0 +1,42 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+}
+body{
+	background: #081b29;
+}
+.brand{
+	position: fixed;
+	width: 100%;
+	padding: 20px 10%;
+	background: aquamarine;
+	backdrop-filter: blur(10px);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 100;
+}
+.logo{
+	font-size: 25px;
+	color: white;
+	font-weight: : 600;
+	text-decoration: none;
+
+}
+
+.navibar a {
+	overflow:hidden;
+	background-color: none;
+	font-size: 18px;
+	text-decoration: none;
+	font-weight: 500;
+	margin-left: 35px;
+	color: white;
+}
+
+.navibar a:hover{
+   color: blue;
+}
