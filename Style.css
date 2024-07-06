@@ -10,39 +10,10 @@ body{
 	background: #081b29c7;
 }
 
-footer{
-	background-color:#00bcd4b3;
-	position: fixed;
-	margin-top: 2%;
-	height: 15%;
-	width:100%;
-	text-align: center;
-	font-size:1em;
-	bottom: 0;
-	padding: 20px 0px;
-}
-	
-.footer-container a{
-/*	display: flex;*/
-	margin: 0 15px;
-	padding: 20px 0px;
-    color: white;
-    text-decoration: none;
-    justify-content: space-between;
-    margin-left: 35px;
-
- 
-}
-
-.footer-rights{
-	padding:10px 0;
-	color: white;
-}
-
 .brand{
 	position: fixed;
 	width: 100%;
-	padding: 20px 10%;
+	padding: 40px 10%;
 /*ori background: aquamarine	*/
 	background: #00bcd4b3;
 	backdrop-filter: blur(10px);
@@ -53,24 +24,11 @@ footer{
 	top: 0;
 }
 .logo{
-	font-size: 25px;
 	color: white;
-	font-weight: : 600;
-	text-decoration: none;
-
-}
-
-.navibar a {
-	overflow:hidden;
-	background-color: none;
 	font-size: 18px;
-	text-decoration: none;
-	font-weight: 500;
-	margin-left: 35px;
-	color: white;
 }
 
-.navibar a:hover{
+.nav-menu a:hover{
    color: dimgray;
 }
 
@@ -90,6 +48,45 @@ footer{
 /*	box-shadow: 0 0 25px orange;*/
 	color: black;
 }
+.clear{ clear: both; }
+
+.nav-bar {
+	overflow:hidden;
+	background-color: none;
+	font-size: 18px;
+	text-decoration: none;
+	font-weight: 500;
+	margin-left: 35px;
+	color: white;
+    
+	display: flex;
+	text-align: center;
+	position: relative;
+	gap: 30px;
+}
+.nav-menu{
+	display: flex;
+	gap: 40px;
+}
+.nav-menu li a{
+	color: white;
+}
+
+.hamburger{
+	display: none;
+	cursor: pointer;
+}
+
+.bar{
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+	-webkit-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+	background-color: white ;
+}
+
 .clear{ clear: both; }
 
 .home{
@@ -117,16 +114,44 @@ footer{
 /*	width: 30px;
 	height: 1px;*/
 }
+
+
+@media(max-width: 900px){
+	.hamburger{
+		display: block;
+	}
+	.hamburger.active .bar:nth-child(2){
+		opacity: 0;
+	}
+	.hamburger.active .bar:nth-child(1){
+		transform: translateY(8px) rotate(45deg);
+	}
+	.hamburger.active .bar:nth-child(3){
+		transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu.active{
+    	left: 0;
+    }
+	.nav-menu{
+		flex-direction: column;
+		/*align-items: center;
+		justify-content: normal;*/
+		width: 80%;
+		height: 100vh;
+		position: fixed;
+		top: 121px;
+		left: -100%;
+/*		z-index: 100;*/
+        text-align: center;
+		background-color: gray;
+		transition: 0.3s;
+        }
+}
+
 -----------------------------------------------------
 /*..................For contact page*/
 
 
-/*.contactUs{
-	position: relative;
-	width: 100%;
-	padding: 100px 50px;
-	margin-top: 150px;
-}*/
 .contactUs  .title{
 	display: flex;
 	justify-content: center;
@@ -187,6 +212,7 @@ footer{
 	justify-content: center;
 	align-items: center;
 	font-size: 2em;
+	margin-top: 30px;
 }
 .content form{
 	text-align: left;
@@ -254,53 +280,25 @@ footer{
 	background-color: lightblue;
 	color: white;
 }
-/*.info .infoBox div span{
-	min-width:40px;
-	height:40px;
-	color:white;
-	background: lightblue;
-	justify-content: center;
-	align-items: center;
-	font-size: 1.5em;
-	border-radius: 50%;
-    margin-right: 50px;
-} */
+
 -----------------------------------------------------------
-/*For Project Page 
-/*.card-box{
-	width:85%;
-	margin: 50px auto;
-	display:grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap:25px;
-}
-/*.cards{
-	background-color: #fff;
-	box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
-}*/
-/*.cards{
-	background-color: #fff;
-	box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
-}*/
+
 .imagec-one{
 	height: 225px;
 /*	background-color: lightblue;*/
 }
 
 .cards .imagec-one{
-/*	background-image: url('image card-one.jpg');*/
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 .cards .imagec-two{
-/*	background-image: url('image card-two.jpg');*/
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 .cards .imagec-three{
-/*	background-image: url('image card-three.jpg');*/
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
